@@ -12,7 +12,7 @@ the implementation of Bool can be expressed using an algebraic type by: // data 
 when a type has more than one value constructor, they are usually referred to as alternatives or cases
 in an algebraic type, we can use any of the alternatives to create a value of that type
 The (==) operator requires its arguments to have the same type
--- ended at h2 "The enumeration"
+## ended at h2 "The enumeration"
 Pattern matching proceeds in the order specified in the source
 In pattern matching, equations below a successful match have no effect
 The sum function returns the sum of all numbers in a list
@@ -30,4 +30,11 @@ Maybe is defined as... // data Maybe a = Just a \n| Nothing\n deriving (Show)
 Recursive types are defined in terms of themselves
 A list is an example of a recursive type
 If two types have the same shape, they are said to be isomorphic
--- stopped at h2 "reporting errors"
+## stopped at h2 "reporting errors"
+error immediately aborts evaluation and prints the error message we give it
+let starts a block of variable declarations
+in ends a block of variable declarations
+each line in a let block introduces a new variable
+a name in a let block is bound to an expression, not a value
+a where clause does the same thing as a let clause but is at the end of a function
+## stopped at h2 "The offside role and white space in an expression"
