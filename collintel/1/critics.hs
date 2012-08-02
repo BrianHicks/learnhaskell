@@ -1,15 +1,18 @@
+module Critics where
+import Data.Set
+
 type Rating = Float
 type Name = String
 
 data Review = Review
-    { reviewName   :: Name
-    , reviewRating :: Rating
-    } deriving (Show)
+              { criticName :: Name
+              , reviewName :: Name
+              , reviewRating :: Rating
+              } deriving (Show)
 
-data Critic = Critic
-    { criticName    :: Name
-    , criticReviews :: [Review]
-    } deriving (Show)
+reviews = [
+
+]
 
 critics = [ Critic "Lisa Rose" [ Review "Lady in the Water"  2.5
                                , Review "Snakes on a Plane"  3.5
@@ -51,11 +54,20 @@ ratingByName (r:rs) name = if reviewName r == name
                            else ratingByName rs name
 ratingByName []     _    = Nothing
 
+criticByName (c:cs) name = if criticName c == name
+                           then Just c
+                           else criticByName cs name
+criticByName []     _    = Nothing
+
 ratingByCritic (c:cs) cname rname = if criticName c == cname
                                     then ratingByName (criticReviews c) rname
                                     else ratingByCritic cs cname rname
 ratingByCritic []     _     _     = Nothing
 
-criticalRating cname rname = ratingByCritic critics cname rname
+reviewNames critic = [reviewName r | r <- (criticReviews critic)]
 
-main = putStrLn (criticName (head critics))
+commonReviews c1 c2 = intersection c1reviewNames c2reviewNames
+                where c1reviewNames = fromList (reviewNames c1)
+                      c2reviewNames = fromList (reviewNames c2)
+
+criticalRating cname rname = ratingByCritic critics cname rname
