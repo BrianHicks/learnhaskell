@@ -38,3 +38,14 @@ each line in a let block introduces a new variable
 a name in a let block is bound to an expression, not a value
 a where clause does the same thing as a let clause but is at the end of a function
 ## stopped at h2 "The offside role and white space in an expression"
+This use of layout to convey structure is sometimes called the offside rule.
+A files indentation is defined by the first top level declaration or definition
+True or False: declarations or definitions after the first must have the same indentation? // True
+Indentation in a let or where keyword is defined by the indentation of the next token after they keyword.
+Explicit structure is used in place of indentation (though not often.)
+To use explicit structure, surround a block of equations with curly braces.
+The case construct lets us match patterns within an expression.
+The case keyword is followed by an arbitrary expression (to be evaluated against)
+In a case statement, the of keyword signifies the end of the expression and the beginning of the block of patterns.
+Each case in a case statement consists of a pattern, an arrow (->) and an expression to evaluate on a match
+## stopped at h2 "Common beginner mistakes with patterns"
