@@ -1,3 +1,4 @@
+## Chapter 3
 We define a new data type using the data keyword
 the object defined by the data keyword is called a type contructor
 the object following the name in a data statement is called a value constructor
@@ -49,3 +50,7 @@ The case keyword is followed by an arbitrary expression (to be evaluated against
 In a case statement, the of keyword signifies the end of the expression and the beginning of the block of patterns.
 Each case in a case statement consists of a pattern, an arrow (->) and an expression to evaluate on a match
 ## stopped at h2 "Common beginner mistakes with patterns"
+A pattern can be followed by zero of more guards, each an expression of type `Bool`.
+A guard is introduced by a `|` symbol.
+When a guard expression is evaluated, all of the variables mentioned in the pattern with which it is associated are bound and can be used.
+In a guard, `otherwise` is simply a variable bound to `True`, to aid readability.
