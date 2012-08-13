@@ -11,3 +11,6 @@ What does the `length` function do? // shows how many elements are in a list
 the `null` function returns True if a list is empty
 `init` returns all but the last of it's input
 ## heading "Safely and sanely working with crashy functions"
+Functions that only have return valeus defined for a subset of valid inputs are called "partial functions"
+We call functions that return valid results over their entire input domains "total functions"
+
