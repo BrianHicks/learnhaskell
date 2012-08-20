@@ -39,3 +39,8 @@ the output of `zip` is as long as the shorter of it's two inputs
 `words` splits an input string on any white space
 `unwords` joins a list of strings with a single space
 ## Stopped at "Exercises"
+Thinking about the structure of the list, and handling the empty and non-empty cases separately is a kind of approach called "structural recursion"
+The non-recursive case (IE empty list) in structural recursion is called the "base case"
+Another name for the base case (structural recursion) is the "terminating case"
+The recursive case (IE non-empty list) in structural recursion is called the "recursive case"
+Another name for the recursive case (structural recursion) is the "inductive case"
